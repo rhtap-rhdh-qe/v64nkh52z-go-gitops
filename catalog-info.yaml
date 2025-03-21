@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: v64nkh52z-go-gitops
+  description: This is GitOps manifest for v64nkh52z-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=v64nkh52z-go
+    backstage.io/kubernetes-id: v64nkh52z-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: v64nkh52z-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:v64nkh52z-go
